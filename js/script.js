@@ -43,7 +43,7 @@ function getRandomQuote (array) {
    return randomQuote;
 };
 var result = getRandomQuote(quotes);
-console.log(result);
+//console.log(result);
 
 
 
@@ -52,17 +52,21 @@ console.log(result);
 ***/
 function printQuote() {
   var result = getRandomQuote();
-    var finalQuote = <p class = 'quote' > quotes.quote + </p>
-    <p class = "source" > quotes.source 
-    <span class = "citation" > quotes.citation </span>
-    <span class = "year" > quotes.year </span>
-    </p>;
-
-    if () {
+    var finalQuote = <p class = 'quote' > randomQuote.quote + </p>;
+    <p class = "source" > randomQuote.source
+    
+    
+    if (randomQuote.citation = ) {
+      finalQuote += <span class = "citation" > randomQuote.citation </span>;
+    } if (randomQuote.year) {
+      finalQuote += <span class = "year" > randomQuote.year </span>;
     }
+</p>
+
+printQuote();
 
 document.getElementById('quote-box').innerHTML = finalQuote;
-}
+};
 
 
 
