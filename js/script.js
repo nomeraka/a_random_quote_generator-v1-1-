@@ -52,14 +52,14 @@ var result = getRandomQuote(quotes);
 ***/
 function printQuote() {
   var result = getRandomQuote();
-    var finalQuote = <p class = 'quote' > randomQuote.quote + </p>;
+    var htmlString = <p class = 'quote' > randomQuote.quote + </p>;
     <p class = "source" > randomQuote.source
     
     
     if (randomQuote.citation = ) {
-      finalQuote += <span class = "citation" > randomQuote.citation </span>;
+      htmlString += <span class = "citation" > randomQuote.citation </span>;
     } if (randomQuote.year) {
-      finalQuote += <span class = "year" > randomQuote.year </span>;
+      htmlString+= <span class = "year" > randomQuote.year </span>;
     }
 </p>
 
