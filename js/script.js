@@ -10,24 +10,24 @@ project 1 - A Random Quote Generator
 var quotes = [
   {
     quote: "Whatever you cultivate, dominates.",
-    person: "Kris Valloton"
+    source: "Kris Valloton"
   },
   {
     quote: "Your view of reality will always come out of your mouth.",
-    person: "Jimmy Evans"
+    source: "Jimmy Evans"
   },
   {
     quote: "Many times what the enemy can't destroy he'll distract.",
-    person: "Micheal Todd"
+    source: "Micheal Todd"
   },
   {
     quote: "If you want to know what a man's like, take a good look at how he treats his inferiors, not his equals.",
-    person: "J.K. Rowling",
+    source: "J.K. Rowling",
     citation: "Harry Potter and the Goblet of Fire"
   },
   {
     quote: "He who has a why to live can bear almost any how.",
-    person: "Friedrich Nietzsche",
+    source: "Friedrich Nietzsche",
     year: 1900
   }
 ];
@@ -37,9 +37,7 @@ var quotes = [
 ***/
 function getRandomQuote (array) {
    var ranNum = Math.floor(Math.random() * quotes.length);
-   for (var i = 0; i < array.length; i ++) {
-    var randomQuote = array[ranNum];
-   };
+    var randomQuote = quotes[ranNum];
    return randomQuote;
 };
 var result = getRandomQuote(quotes);
@@ -52,21 +50,20 @@ var result = getRandomQuote(quotes);
 ***/
 function printQuote() {
   var result = getRandomQuote();
-    var htmlString = <p class = 'quote' > randomQuote.quote + </p>;
-    <p class = "source" > randomQuote.source
+    var htmlString = '<p class = "quote" >' + result.quote + '</p>';
+    htmlString += '<p class = "source" >' + result.source ;
     
     
-    if (randomQuote.citation = ) {
-      htmlString += <span class = "citation" > randomQuote.citation </span>;
-    } if (randomQuote.year) {
-      htmlString+= <span class = "year" > randomQuote.year </span>;
+    if (result.citation) {
+      htmlString += '< span class = "citation" >' + result.citation + '</span>';
+    } if (result.year) {
+      htmlString += '<span class = "year" >' + result.year + '</span>';
     }
-</p>
+'</p>'
+document.getElementById('quote-box').innerHTML = htmlString;
 
-printQuote();
-
-document.getElementById('quote-box').innerHTML = finalQuote;
 };
+
 
 
 
